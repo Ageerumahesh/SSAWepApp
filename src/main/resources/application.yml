@@ -1,0 +1,24 @@
+server:
+  port: 9191
+spring:
+  datasource:
+    username: sa
+    password: 3is
+    url: jdbc:sqlserver://localhost:1435;databaseName=MARKET
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+app:
+  messages:
+    ENROLL_SAVE_MSG: Your SSN Enrollment Completed. Your SSN
+    ENROLL_FAIL_MSG: ENROLL FAILED PLEASE,TRY AGAIN LATER
+    ENROLL_NOT_FOUND: INVALID ENROLL ID
